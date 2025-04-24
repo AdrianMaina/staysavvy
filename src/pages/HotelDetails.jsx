@@ -13,7 +13,7 @@ export default function HotelDetails() {
   const [rating, setRating] = useState(5);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/hotels/${id}`)
+    fetch(`https://staysavvy-1est.onrender.com/hotels/${id}`)
       .then((res) => {
         if (!res.ok) throw new Error('Hotel not found');
         return res.json();
@@ -37,7 +37,7 @@ export default function HotelDetails() {
 
     const updatedReviews = [...reviews, newReview];
 
-    fetch(`http://localhost:3001/hotels/${id}`, {
+    fetch(`https://staysavvy-1est.onrender.com/hotels/${id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
