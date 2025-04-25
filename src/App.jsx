@@ -16,7 +16,7 @@ export default function App() {
   const { user } = useAuth(); // optional if using auth
 
   useEffect(() => {
-    fetch('https://staysavvy-1est.onrender.com')
+    fetch('https://staysavvy-1est.onrender.com/hotels')
       .then(res => res.json())
       .then(data => setHotels(data))
       .catch(err => console.error('Failed to fetch hotels:', err));
